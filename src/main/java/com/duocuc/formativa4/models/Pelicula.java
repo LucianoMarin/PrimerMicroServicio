@@ -38,6 +38,8 @@ public class Pelicula {
     @Column (name="sinopsi")
     private String sinopsi;
 
+    public Pelicula(){}
+
     public Pelicula(Long id,String nombre,int anno,String director,String genero,String sinopsi){
 
         this.id=id;

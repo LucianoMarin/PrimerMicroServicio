@@ -29,7 +29,6 @@ public class ControllerPelicula {
     private PeliculaService peliculaService;
 
 
-
         @GetMapping
         public List <Pelicula> mostrarPeliculas(){
             return peliculaService.getAllPeliculas();
