@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import com.duocuc.formativa4.models.Pelicula;
 import com.duocuc.formativa4.repository.PeliculaRepository;
 
+
+/* se construyen las funciones al incorporar la interfaz  */
+
 @Service
 public class PeliculaServiceImp implements PeliculaService{
 
@@ -31,18 +34,31 @@ private PeliculaRepository peliculaRepositorio;
 
 @Override
 public Pelicula createPelicula(Pelicula pelicula) {
-    return null;
+    return peliculaRepositorio.save(pelicula);
 }
 
 @Override
 public void deletePelicula(Long id) {
+
+    peliculaRepositorio.deleteById(id);
     
 }
     
 
 @Override
 public Pelicula updatePelicula(Long id, Pelicula pelicula) {
-     return null;
+     if(peliculaRepositorio.existsById(id)){
+
+        pelicula.setId(id);
+
+        return peliculaRepositorio.save(pelicula);
+
+     }else{
+
+        return null;
+     }
+
+     
 }
 
 }

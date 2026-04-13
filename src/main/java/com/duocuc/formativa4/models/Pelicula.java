@@ -21,7 +21,8 @@ public class Pelicula {
     @Column (name="nombre")
     private String nombre;
 
-    @NotBlank(message="No puede dejar el campo año vacio")
+
+    @NotNull
     @Column (name="anno")
     private int anno;
 
@@ -62,7 +63,7 @@ public class Pelicula {
 
     public void setaAnno(int anno){this.anno=anno;}
 
-    public int getAnno(int anno){return this.anno;}
+    public int getAnno(){return this.anno;}
 
     public void setDirector(String director){this.director=director;}
     

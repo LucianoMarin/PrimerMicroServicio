@@ -21,6 +21,8 @@ import com.duocuc.formativa4.services.PeliculaService;
 
 @RestController
 @RequestMapping("/peliculas")
+
+/* permite hacer request a microservicio */
 @CrossOrigin(origins = "*")
 
 public class ControllerPelicula {
